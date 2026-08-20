@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="976" height="400" viewBox="0 0 976 400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dbe9f5"/>
+      <stop offset="1" stop-color="#c3d9ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="976" height="400" fill="url(#g)"/>
+  <g fill="none" stroke="#5b7b93" stroke-width="3.2" opacity="0.9">
+    <rect x="456.0" y="140.26666666666665" width="64.0" height="48.0" rx="5.12"/>
+    <circle cx="488.0" cy="164.79999999999998" r="14.08"/>
+    <rect x="476.48" y="128.74666666666664" width="23.04" height="11.52" rx="1.92"/>
+  </g>
+  <text x="488.0" y="232.0" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="18.0" fill="#5b7b93" text-anchor="middle">写真差し替え：作業風景2</text>
+  <text x="488.0" y="257.2" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="14.4" fill="#5b7b93" text-anchor="middle" opacity="0.7">976×400</text>
+</svg>
