@@ -8,7 +8,7 @@
 <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Oxanium:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Oxanium:wght@500;600;700&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -24,6 +24,11 @@
         <li><a href="#recruit">リクルート</a></li>
         <li><a href="#company">会社概要</a></li>
         <li><a href="#contact">お問合せ</a></li>
+        <li>
+          <a href="https://www.instagram.com/9nine_techno/" class="site-nav__icon" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -34,10 +39,13 @@
   <!-- KEYVISUAL -->
   <section class="kv">
     <div class="kv__bg">
-      <img src="assets/img/hero-keyvisual.jpg.svg" alt="ナインテクノの工場での作業風景">
+      <picture>
+        <source media="(max-width: 768px)" srcset="assets/img/hero-keyvisual-m.png">
+        <img src="assets/img/hero-keyvisual.png" alt="ナインテクノの工場での作業風景">
+      </picture>
     </div>
     <div class="kv__content">
-      <p class="kv__copy">Creating the future from Toyama</p>
+      <p class="kv__copy">Creating the future<br class="kv__copy-break"> from Toyama</p>
       <p class="kv__lead">想いをカタチに。未来を創る。<br>ナインテクノ</p>
     </div>
   </section>
@@ -57,8 +65,8 @@
       </div>
     </div>
     <div class="about__images">
-      <div class="about__image"><img src="assets/img/about-1.jpg.svg" alt="ナインテクノの作業風景1"></div>
-      <div class="about__image"><img src="assets/img/about-2.jpg.svg" alt="ナインテクノの作業風景2"></div>
+      <div class="about__image"><img src="assets/img/about-1.png" alt="ナインテクノの作業風景1"></div>
+      <div class="about__image"><img src="assets/img/about-2.png" alt="ナインテクノの作業風景2"></div>
     </div>
   </section>
 
@@ -73,8 +81,8 @@
     <div class="strength__list">
       <article class="strength__item">
         <div class="strength__media">
-          <img src="assets/img/strength-1.jpg.svg" alt="強み01の作業風景">
-          <span class="strength__number"><em>01</em>STRENGTH</span>
+          <img src="assets/img/strength-1.png" alt="強み01の作業風景">
+          <!--<span class="strength__number"><em>01</em>STRENGTH</span>-->
         </div>
         <div class="strength__text">
           <h3>長年の経験と技術、<br>自働化・省力化の<br>プロフェッショナル</h3>
@@ -83,8 +91,8 @@
       </article>
       <article class="strength__item strength__item--reverse">
         <div class="strength__media">
-          <img src="assets/img/strength-2.jpg.svg" alt="強み02のパーツフィーダ">
-          <span class="strength__number"><em>02</em>STRENGTH</span>
+          <img src="assets/img/strength-2.png" alt="強み02のパーツフィーダ">
+          <!--<span class="strength__number"><em>02</em>STRENGTH</span>-->
         </div>
         <div class="strength__text">
           <h3>パーツフィーダも自社で製作<br>「自働機・供給部 一貫生産」</h3>
@@ -93,8 +101,8 @@
       </article>
       <article class="strength__item">
         <div class="strength__media">
-          <img src="assets/img/strength-3.jpg.svg" alt="強み03のメンテナンス風景">
-          <span class="strength__number"><em>03</em>STRENGTH</span>
+          <img src="assets/img/strength-3.png" alt="強み03のメンテナンス風景">
+          <!--<span class="strength__number"><em>03</em>STRENGTH</span>-->
         </div>
         <div class="strength__text">
           <h3>他社製品も対応可能な<br>質の高いメンテナンス</h3>
@@ -119,10 +127,10 @@
         <li><span>お打合せ</span></li>
         <li><span>お見積</span></li>
         <li><span>設計</span></li>
-        <li><span>組立<br>パーツフィーダ製作<br>調整</span></li>
+        <li><span>組立／パーツフィーダ製作／調整</span></li>
         <li><span>納品</span></li>
       </ol>
-      <a href="#contact" class="btn btn--dark">当社のサービスに関するお問合せはこちら<svg class="btn__arrow" width="16" height="19" viewBox="0 0 16 19" fill="none" aria-hidden="true"><path d="M8 0v17M1 10l7 7 7-7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+      <a href="#contact" class="btn btn--dark"><img class="btn__arrow" src="assets/img/btn-arrow.svg" width="28" height="28" alt="">当社のサービスに関する<br class="btn__break">お問合せはこちら</a>
     </div>
   </section>
 
@@ -131,15 +139,21 @@
     <div class="container">
       <div class="ceo__box">
         <div class="ceo__left">
-          <div class="ceo__logo"><img src="assets/img/logo-mark.svg" alt=""></div>
-          <p class="ceo__en">CEO&rsquo;s Message</p>
-          <h2 class="ceo__ja">代表取締役 メッセージ</h2>
-          <p class="ceo__body">弊社は創業以来、自働省力機械の設計、製作を通じて皆様に信頼される製品を作ってまいりました。
-特にパーツフィーダという得意分野を持ち、自動機と共に提供できることが弊社の強みです。
-富山県滑川市の小さな工場から今後も仲間と長年のノウハウと新しい技術をもとに高品質で安全・高精度な製品を作り続けたいと思います。</p>
+          <div class="ceo__heading">
+            <div class="ceo__logo"><img src="assets/img/logo-mark.svg" alt=""></div>
+            <div class="ceo__heading-text">
+              <p class="ceo__en">CEO&rsquo;s Message</p>
+              <h2 class="ceo__ja">代表取締役 メッセージ</h2>
+            </div>
+          </div>
+          <div class="ceo__body">
+            <p>弊社は創業以来、自働省力機械の設計、製作を通じて皆様に信頼される製品を作ってまいりました。</p>
+            <p>特にパーツフィーダという得意分野を持ち、自動機と共に提供できることが弊社の強みです。</p>
+            <p>富山県滑川市の小さな工場から今後も仲間と長年のノウハウと新しい技術をもとに高品質で安全・高精度な製品を作り続けたいと思います。</p>
+          </div>
           <p class="ceo__name">代表取締役　長谷川 洋</p>
         </div>
-        <div class="ceo__portrait"><img src="assets/img/ceo-portrait.jpg.svg" alt="代表取締役 長谷川 洋"></div>
+        <div class="ceo__portrait"><img src="assets/img/ceo-portrait.png" alt="代表取締役 長谷川 洋"></div>
       </div>
     </div>
   </section>
@@ -155,7 +169,12 @@
 手がけるのは、世界の製造ラインを支える本物の仕事。
 小さな会社だからこそ、一人ひとりが技術と向き合い、確かな力を身につけられます。</p>
     </div>
-    <div class="recruit__hero"><img src="assets/img/recruit-hero.jpg.svg" alt="ナインテクノのスタッフ集合写真"></div>
+    <div class="recruit__hero">
+      <picture>
+        <source media="(max-width: 768px)" srcset="assets/img/recruit-hero-m.png">
+        <img src="assets/img/recruit-hero.png" alt="ナインテクノのスタッフ集合写真">
+      </picture>
+    </div>
 
     <div class="container">
       <header class="section-head section-head--accent">
@@ -164,7 +183,12 @@
       </header>
 
       <article class="interview">
-        <div class="interview__photo"><img src="assets/img/interview-portrait.jpg.svg" alt="技術部 T.Nさん"></div>
+        <div class="interview__photo">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/img/interview-portrait-m.png">
+            <img src="assets/img/interview-portrait.png" alt="技術部 T.Nさん">
+          </picture>
+        </div>
         <div class="interview__text">
           <p class="interview__name"><strong>技術部　T.Nさん</strong><span>（くすり・バイオ科 卒業 / 2024年入社）</span></p>
           <p>私は入社3年目の若手ですが、昔からものづくりが好きで、経験豊富な先輩から優しく指導していただき、毎日ワクワクしながら仕事をしています。これからも色々なノウハウを覚えながら一人前の職人を目指して頑張ります。</p>
@@ -172,17 +196,24 @@
         </div>
       </article>
 
-      <div class="recruit__gallery">
-        <div><img src="assets/img/interview-gallery-1.jpg.svg" alt="作業風景A"></div>
-        <div><img src="assets/img/interview-gallery-2.jpg.svg" alt="作業風景B"></div>
-        <div><img src="assets/img/interview-gallery-3.jpg.svg" alt="作業風景C"></div>
-        <div><img src="assets/img/interview-gallery-4.jpg.svg" alt="作業風景D"></div>
-      </div>
+    </div>
 
+    <div class="recruit__gallery-wrap">
+      <div class="recruit__gallery">
+        <div><img src="assets/img/interview-gallery-1.png" alt="作業風景A"></div>
+        <div><img src="assets/img/interview-gallery-2.png" alt="作業風景B"></div>
+        <div><img src="assets/img/interview-gallery-3.png" alt="作業風景C"></div>
+        <div><img src="assets/img/interview-gallery-4.png" alt="作業風景D"></div>
+      </div>
+      <p class="recruit__gallery-swipe">Swipe<svg width="22" height="22" viewBox="0 0 22 22.0919" fill="none" aria-hidden="true"><path d="M1.5 9.54594C0.671573 9.54594 0 10.2175 0 11.0459C0 11.8744 0.671573 12.5459 1.5 12.5459V11.0459V9.54594ZM21.5607 12.1066C22.1464 11.5208 22.1464 10.5711 21.5607 9.98528L12.0147 0.439341C11.4289 -0.146446 10.4792 -0.146446 9.8934 0.439341C9.30761 1.02513 9.30761 1.97487 9.8934 2.56066L18.3787 11.0459L9.8934 19.5312C9.30761 20.117 9.30761 21.0668 9.8934 21.6525C10.4792 22.2383 11.4289 22.2383 12.0147 21.6525L21.5607 12.1066ZM1.5 11.0459V12.5459H20.5V11.0459V9.54594H1.5V11.0459Z" fill="#0084F7"/></svg></p>
+    </div>
+
+    <div class="container">
       <div class="recruit__persona">
+        <img class="recruit__persona-bg" src="assets/img/recruit-bg-9.svg" alt="" aria-hidden="true">
         <h3 class="recruit__persona-title">求める人物像</h3>
         <div class="recruit__persona-inner">
-          <div class="recruit__persona-photo"><img src="assets/img/recruit-people.jpg.svg" alt="求める人物像のイメージ"></div>
+          <div class="recruit__persona-photo"><img src="assets/img/recruit-people.png" alt="求める人物像のイメージ"></div>
           <div class="recruit__persona-text">
             <p class="recruit__persona-lead">こんな方と一緒にナインテクノを<br>作りたいと思っています。</p>
             <ul>
@@ -199,19 +230,19 @@
         </div>
       </div>
 
-      <a href="#contact" class="btn btn--dark">ピンと来た方は、ぜひお問合せ下さい！<svg class="btn__arrow" width="16" height="19" viewBox="0 0 16 19" fill="none" aria-hidden="true"><path d="M8 0v17M1 10l7 7 7-7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+      <a href="#contact" class="btn btn--dark"><img class="btn__arrow" src="assets/img/btn-arrow.svg" width="28" height="28" alt="">ピンと来た方は、<br class="btn__break">ぜひお問合せ下さい！</a>
     </div>
   </section>
 
   <!-- COMPANY -->
   <section class="section company" id="company">
     <div class="container">
-      <header class="section-head">
+      <header class="section-head section-head--sm">
         <p class="section-head__en">COMPANY</p>
         <p class="section-head__ja">会社概要</p>
       </header>
       <div class="company__grid">
-        <div class="company__photo"><img src="assets/img/company-team.jpg.svg" alt="ナインテクノ 本社・スタッフ"></div>
+        <div class="company__photo"><img src="assets/img/company-team.png" alt="ナインテクノ 本社・スタッフ"></div>
         <table class="company__table">
           <tbody>
             <tr><th>会社名</th><td>有限会社ナインテクノ</td></tr>
@@ -220,13 +251,15 @@
             <tr><th>代表者</th><td>代表取締役　長谷川 洋</td></tr>
             <tr><th>従業員</th><td>6名</td></tr>
             <tr><th>営業内容</th><td>各種産業の省力化機械及び機器の設計製作<br>各種製品、部品の自動組立機及び検査機／パーツフィーダ整列機／電装電子部品／機械部品機器の販売設計製作コンサルタント</td></tr>
+            <tr><th>主要取引先</th><td><a href="https://www.finecs.co.jp/" target="_blank" rel="noopener">ファインネクス株式会社</a><br><a href="http://www.rise-toyama.com/" target="_blank" rel="noopener">株式会社ライズ</a></td></tr>
             <tr><th>本社・工場</th><td>〒936-0806　富山県滑川市北野45<br>TEL：076-475-5057（代）　FAX：076-475-5497</td></tr>
           </tbody>
         </table>
       </div>
       <div class="company__map">
         <iframe title="ナインテクノ 所在地地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=%E5%AF%8C%E5%B1%B1%E7%9C%8C%E6%BB%91%E5%B7%9D%E5%B8%82%E5%8C%97%E9%87%8E45&output=embed"></iframe>
+          src="https://www.google.com/maps?q=36.7752235,137.3690485&z=17&output=embed"></iframe>
+        <a class="company__map-link" href="https://maps.app.goo.gl/isNyqDiSLHW7PNGE8" target="_blank" rel="noopener">Google Mapsで開く</a>
       </div>
     </div>
   </section>
@@ -234,7 +267,7 @@
   <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="container">
-      <header class="section-head">
+      <header class="section-head section-head--sm">
         <p class="section-head__en">CONTACT</p>
         <p class="section-head__ja">お問合せ</p>
       </header>
@@ -244,14 +277,14 @@
         <span class="contact__tel-number">TEL : 076-475-5057</span>
         <span class="contact__tel-hours">営業時間 8:20 〜 17:00</span>
       </a>
-      <a href="mailto:info@example.com" class="btn btn--dark">メールはこちらから<svg class="btn__arrow" width="24" height="12" viewBox="0 0 24 12" fill="none" aria-hidden="true"><path d="M0 6h22M15 0l7 6-7 6" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+      <a href="mailto:info@example.com" class="btn btn--dark"><img class="btn__arrow" src="assets/img/btn-arrow-right.svg" width="28" height="28" alt="">メールはこちらから</a>
     </div>
   </section>
 
   <div class="gallery-strip">
-    <div><img src="assets/img/gallery-1.jpg.svg" alt="工場内観"></div>
-    <div><img src="assets/img/gallery-2.jpg.svg" alt="部品のクローズアップ"></div>
-    <div><img src="assets/img/gallery-3.jpg.svg" alt="作業スタッフの様子"></div>
+    <div><img src="assets/img/gallery-1.png" alt="工場内観"></div>
+    <div><img src="assets/img/gallery-2.png" alt="部品のクローズアップ"></div>
+    <div><img src="assets/img/gallery-3.png" alt="作業スタッフの様子"></div>
   </div>
 
 </main>
