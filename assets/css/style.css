@@ -82,6 +82,7 @@ button { font: inherit; }
 }
 
 /* --- Buttons --- */
+.btn__break { display: none; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -418,6 +419,7 @@ button { font: inherit; }
   overflow: hidden;
 }
 .interview__photo { aspect-ratio: 348 / 414; overflow: hidden; }
+.interview__photo picture { display: block; width: 100%; height: 100%; }
 .interview__photo img { width: 100%; height: 100%; object-fit: cover; }
 .interview__text {
   padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 40px);
@@ -506,9 +508,10 @@ button { font: inherit; }
 /* ============================================================
    COMPANY
    ============================================================ */
+.company { padding-bottom: clamp(32px, 4vw, 56px); }
 .company__grid {
   display: grid;
-  grid-template-columns: 345fr 630fr;
+  grid-template-columns: 420fr 560fr;
   gap: clamp(24px, 4vw, 60px);
   margin-bottom: clamp(32px, 5vw, 48px);
 }
@@ -523,9 +526,10 @@ button { font: inherit; }
   vertical-align: top;
 }
 .company__table th { width: 120px; white-space: nowrap; padding-right: 20px; }
+.company__table a { color: var(--c-blue); text-decoration: underline; }
 .company__map {
   position: relative;
-  aspect-ratio: 1000 / 250;
+  aspect-ratio: 1000 / 380;
   background: #c5c5c5;
   overflow: hidden;
 }
@@ -547,7 +551,8 @@ button { font: inherit; }
 /* ============================================================
    CONTACT
    ============================================================ */
-.contact { background: var(--c-blue-light); text-align: center; }
+.contact { background: var(--c-blue-light); text-align: center; padding-top: clamp(40px, 5vw, 64px); }
+.contact .section-head--sm { margin-bottom: clamp(20px, 3vw, 32px); }
 .contact__lead {
   font-size: clamp(14px, 1.6vw, 18px);
   white-space: pre-line;
@@ -670,7 +675,7 @@ button { font: inherit; }
   }
   .kv__lead { font-size: 18px; line-height: 1.2; }
 
-  .about__images { grid-template-columns: 1fr; gap: 2px; }
+  .about__images { grid-template-columns: 1fr; gap: 1px; }
   .about__image { aspect-ratio: 390 / 159; }
 
   .strength__item,
@@ -682,7 +687,7 @@ button { font: inherit; }
   .strength__media { aspect-ratio: auto; }
   .strength__media img { height: auto; object-fit: initial; }
 
-  .flow__steps { gap: 16px 20px; }
+  .flow__steps { gap: 4px 20px; }
   .flow__steps li:not(:last-child)::after { left: 100%; width: 20px; }
   .flow__steps li { width: 84px; }
 
@@ -700,9 +705,15 @@ button { font: inherit; }
     grid-template-columns: 1fr;
     box-shadow: 10px 10px 0 var(--c-blue-70);
   }
-  .interview__photo { aspect-ratio: 350 / 416; }
-  .interview__photo img { transform: scale(1.24); }
+  .interview__photo { aspect-ratio: 700 / 720; }
   .interview__name { gap: 2px 8px; line-height: 1.3; }
+  .section-head__en { font-size: 50px; }
+  .section-head--accent .section-head__en { font-size: 32px; }
+  .section-head--accent .section-head__ja { font-size: 18px; }
+  .ceo__en { font-size: 22px; }
+  .ceo__ja { font-size: 20px; }
+  .strength__text h3 { font-size: 20px; }
+  .about__title { font-size: 20px; }
 
   .recruit__persona-bg {
     top: 18%;
@@ -723,22 +734,50 @@ button { font: inherit; }
     flex: 0 0 80%;
     scroll-snap-align: start;
   }
+  .recruit__gallery-wrap { position: relative; }
   .recruit__gallery-swipe {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 5px;
-    margin: 2px 12px 0 0;
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
     font-family: var(--font-en);
     font-weight: 600;
-    font-size: 16px;
-    color: var(--c-blue);
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
   }
   .recruit__gallery-swipe svg { flex-shrink: 0; }
 
   .recruit__persona-inner { grid-template-columns: 1fr; }
   .recruit__persona-photo { aspect-ratio: 350 / 268; order: 2; }
   .recruit__persona-text { order: 1; }
+  .recruit__persona-lead { text-align: center; font-size: 20px; }
+  .interview__name strong { font-size: 20px; }
+  .recruit__persona { padding-top: 16px; margin-top: 16px; }
+  .recruit .btn { margin: 20px auto 20px; }
+  .recruit { padding-bottom: 24px; }
+  .company { padding-top: 28px; }
+  .contact { padding-top: 28px; }
+  .section-head--sm { margin-bottom: 20px; }
+  .recruit__persona-text ul { gap: 4px; padding-left: 14px; }
+  .btn__break { display: block; }
+  .btn { font-size: 15px; }
+
+  .about__body,
+  .strength__text p,
+  .flow__lead,
+  .ceo__body,
+  .recruit__lead,
+  .interview__text p,
+  .contact__lead,
+  .company__table th,
+  .company__table td {
+    font-size: 16px;
+  }
+  .recruit__persona-text li { font-size: 15px; }
 
   .company__grid { grid-template-columns: 1fr; }
   .company__photo { aspect-ratio: 300 / 370; }
@@ -747,11 +786,10 @@ button { font: inherit; }
 
   .contact__tel { max-width: none; }
 
-  .gallery-strip { grid-template-columns: 1fr; gap: 2px; }
+  .gallery-strip { grid-template-columns: 1fr; gap: 1px; }
   .gallery-strip div { aspect-ratio: 330 / 220; }
 
-  .btn { width: 100%; }
-  .recruit .btn { width: 100%; }
+  .btn { width: fit-content; text-align: left; }
 }
 
 @media (max-width: 480px) {
