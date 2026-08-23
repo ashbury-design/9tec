@@ -91,7 +91,7 @@ button { font: inherit; }
   background: var(--c-text);
   color: #fff;
   font-weight: 500;
-  font-size: clamp(16px, 1.8vw, 22px);
+  font-size: clamp(14px, 1.5vw, 18px);
   padding: 20px clamp(28px, 6vw, 100px);
   border-radius: 10px;
   text-align: center;
@@ -290,12 +290,12 @@ button { font: inherit; }
 /* ============================================================
    FLOW
    ============================================================ */
-.flow { padding-top: clamp(16px, 2vw, 24px); }
+.flow { padding-top: clamp(12px, 1.5vw, 20px); padding-bottom: clamp(32px, 4vw, 56px); }
 .flow__lead {
   text-align: center;
   font-size: clamp(14px, 1.6vw, 18px);
   white-space: pre-line;
-  margin-bottom: clamp(32px, 5vw, 56px);
+  margin-bottom: clamp(20px, 3vw, 32px);
 }
 .flow__steps {
   display: flex;
