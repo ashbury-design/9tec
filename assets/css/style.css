@@ -474,7 +474,7 @@ button { font: inherit; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 540fr 405fr;
+  grid-template-columns: 460fr 485fr;
   gap: clamp(24px, 4vw, 55px);
   align-items: center;
 }
@@ -486,11 +486,12 @@ button { font: inherit; }
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.recruit__persona-text ul { display: flex; flex-direction: column; gap: 8px; }
+.recruit__persona-text ul { display: flex; flex-direction: column; gap: 6px; }
 .recruit__persona-text li {
   position: relative;
   padding-left: 1.3em;
   font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.4;
 }
 .recruit__persona-text li::before {
   content: '';
