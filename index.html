@@ -8,7 +8,7 @@
 <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Oxanium:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Oxanium:wght@500;600;700&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -24,6 +24,11 @@
         <li><a href="#recruit">リクルート</a></li>
         <li><a href="#company">会社概要</a></li>
         <li><a href="#contact">お問合せ</a></li>
+        <li>
+          <a href="https://www.instagram.com/9nine_techno/" class="site-nav__icon" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -119,7 +124,7 @@
         <li><span>お打合せ</span></li>
         <li><span>お見積</span></li>
         <li><span>設計</span></li>
-        <li><span>組立<br>パーツフィーダ製作<br>調整</span></li>
+        <li><span>組立／パーツフィーダ製作／調整</span></li>
         <li><span>納品</span></li>
       </ol>
       <a href="#contact" class="btn btn--dark">当社のサービスに関するお問合せはこちら<svg class="btn__arrow" width="16" height="19" viewBox="0 0 16 19" fill="none" aria-hidden="true"><path d="M8 0v17M1 10l7 7 7-7" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
@@ -131,12 +136,18 @@
     <div class="container">
       <div class="ceo__box">
         <div class="ceo__left">
-          <div class="ceo__logo"><img src="assets/img/logo-mark.svg" alt=""></div>
-          <p class="ceo__en">CEO&rsquo;s Message</p>
-          <h2 class="ceo__ja">代表取締役 メッセージ</h2>
-          <p class="ceo__body">弊社は創業以来、自働省力機械の設計、製作を通じて皆様に信頼される製品を作ってまいりました。
-特にパーツフィーダという得意分野を持ち、自動機と共に提供できることが弊社の強みです。
-富山県滑川市の小さな工場から今後も仲間と長年のノウハウと新しい技術をもとに高品質で安全・高精度な製品を作り続けたいと思います。</p>
+          <div class="ceo__heading">
+            <div class="ceo__logo"><img src="assets/img/logo-mark.svg" alt=""></div>
+            <div class="ceo__heading-text">
+              <p class="ceo__en">CEO&rsquo;s Message</p>
+              <h2 class="ceo__ja">代表取締役 メッセージ</h2>
+            </div>
+          </div>
+          <div class="ceo__body">
+            <p>弊社は創業以来、自働省力機械の設計、製作を通じて皆様に信頼される製品を作ってまいりました。</p>
+            <p>特にパーツフィーダという得意分野を持ち、自動機と共に提供できることが弊社の強みです。</p>
+            <p>富山県滑川市の小さな工場から今後も仲間と長年のノウハウと新しい技術をもとに高品質で安全・高精度な製品を作り続けたいと思います。</p>
+          </div>
           <p class="ceo__name">代表取締役　長谷川 洋</p>
         </div>
         <div class="ceo__portrait"><img src="assets/img/ceo-portrait.png" alt="代表取締役 長谷川 洋"></div>
@@ -172,14 +183,18 @@
         </div>
       </article>
 
-      <div class="recruit__gallery">
-        <div><img src="assets/img/interview-gallery-1.png" alt="作業風景A"></div>
-        <div><img src="assets/img/interview-gallery-2.png" alt="作業風景B"></div>
-        <div><img src="assets/img/interview-gallery-3.png" alt="作業風景C"></div>
-        <div><img src="assets/img/interview-gallery-4.png" alt="作業風景D"></div>
-      </div>
+    </div>
 
+    <div class="recruit__gallery">
+      <div><img src="assets/img/interview-gallery-1.png" alt="作業風景A"></div>
+      <div><img src="assets/img/interview-gallery-2.png" alt="作業風景B"></div>
+      <div><img src="assets/img/interview-gallery-3.png" alt="作業風景C"></div>
+      <div><img src="assets/img/interview-gallery-4.png" alt="作業風景D"></div>
+    </div>
+
+    <div class="container">
       <div class="recruit__persona">
+        <img class="recruit__persona-bg" src="assets/img/recruit-bg-9.svg" alt="" aria-hidden="true">
         <h3 class="recruit__persona-title">求める人物像</h3>
         <div class="recruit__persona-inner">
           <div class="recruit__persona-photo"><img src="assets/img/recruit-people.png" alt="求める人物像のイメージ"></div>
@@ -206,7 +221,7 @@
   <!-- COMPANY -->
   <section class="section company" id="company">
     <div class="container">
-      <header class="section-head">
+      <header class="section-head section-head--sm">
         <p class="section-head__en">COMPANY</p>
         <p class="section-head__ja">会社概要</p>
       </header>
@@ -226,7 +241,8 @@
       </div>
       <div class="company__map">
         <iframe title="ナインテクノ 所在地地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=%E5%AF%8C%E5%B1%B1%E7%9C%8C%E6%BB%91%E5%B7%9D%E5%B8%82%E5%8C%97%E9%87%8E45&output=embed"></iframe>
+          src="https://www.google.com/maps?q=36.7752235,137.3690485&z=17&output=embed"></iframe>
+        <a class="company__map-link" href="https://maps.app.goo.gl/isNyqDiSLHW7PNGE8" target="_blank" rel="noopener">Google Mapsで開く</a>
       </div>
     </div>
   </section>
@@ -234,7 +250,7 @@
   <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="container">
-      <header class="section-head">
+      <header class="section-head section-head--sm">
         <p class="section-head__en">CONTACT</p>
         <p class="section-head__ja">お問合せ</p>
       </header>

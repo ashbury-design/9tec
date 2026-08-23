@@ -66,6 +66,15 @@ button { font: inherit; }
   font-size: clamp(14px, 1.4vw, 16px);
   margin-top: -0.5em;
 }
+.section-head--accent .section-head__en,
+.section-head--sm .section-head__en {
+  font-weight: 500;
+  font-size: clamp(26px, 3.9vw, 60px);
+  letter-spacing: -0.06em;
+}
+.section-head--accent {
+  margin-bottom: clamp(20px, 2.5vw, 32px);
+}
 .section-head--accent .section-head__ja {
   color: var(--c-blue);
   font-weight: 700;
@@ -138,15 +147,19 @@ button { font: inherit; }
   transition: background 0.2s ease;
 }
 .site-nav__list a:hover { background: var(--c-blue); }
+.site-nav__icon {
+  padding: 7px !important;
+  border-radius: 50% !important;
+}
 
 /* ============================================================
    KEYVISUAL
    ============================================================ */
 .kv {
   position: relative;
-  height: 96vh;
+  height: min(96vh, 54.12vw);
   min-height: 480px;
-  max-height: 780px;
+  max-height: 920px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,6 +227,7 @@ button { font: inherit; }
 /* ============================================================
    STRENGTH
    ============================================================ */
+.strength { padding-top: clamp(12px, 1.5vw, 20px); }
 .strength__list {
   display: flex;
   flex-direction: column;
@@ -273,6 +287,7 @@ button { font: inherit; }
 /* ============================================================
    FLOW
    ============================================================ */
+.flow { padding-top: clamp(16px, 2vw, 24px); }
 .flow__lead {
   text-align: center;
   font-size: clamp(14px, 1.6vw, 18px);
@@ -305,8 +320,8 @@ button { font: inherit; }
   top: 50%;
   left: calc(100% + 4px);
   width: clamp(14px, 1.6vw, 24px);
-  height: 3px;
-  background: var(--c-blue);
+  aspect-ratio: 42 / 23.094;
+  background: url('../img/flow-arrow.svg') no-repeat center / contain;
   transform: translateY(-50%);
 }
 .flow__steps span {
@@ -322,6 +337,7 @@ button { font: inherit; }
 /* ============================================================
    CEO
    ============================================================ */
+.ceo { padding-top: clamp(16px, 2vw, 28px); }
 .ceo__box {
   position: relative;
   background: var(--c-blue-light);
@@ -332,39 +348,51 @@ button { font: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 0 clamp(24px, 4vw, 60px);
+  gap: 0 clamp(20px, 3vw, 32px);
 }
-.ceo__logo { width: 56px; margin-bottom: 12px; }
+.ceo__heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: clamp(16px, 2vw, 22px);
+}
+.ceo__logo img{ width: 80px; flex-shrink: 0; }
 .ceo__en {
   font-family: var(--font-accent);
   font-size: clamp(18px, 2.4vw, 25px);
   letter-spacing: -0.03em;
-  margin-bottom: 8px;
+  line-height: 1.3;
+  margin-bottom: 0;
 }
 .ceo__ja {
   font-size: clamp(18px, 2.4vw, 24px);
-  margin-bottom: clamp(20px, 3vw, 36px);
+  line-height: 1.1;
 }
 .ceo__body {
   font-size: clamp(14px, 1.5vw, 18px);
-  white-space: pre-line;
+}
+.ceo__body p:not(:last-child) {
+  margin-bottom: clamp(14px, 2vw, 20px);
 }
 .ceo__portrait {
   aspect-ratio: 434 / 463;
   overflow: hidden;
   border-radius: 2px;
+  margin-top: 50px;
 }
 .ceo__portrait img { width: 100%; height: 100%; object-fit: cover; }
 .ceo__name {
   margin-top: 20px;
-  font-size: clamp(16px, 1.8vw, 25px);
+  font-family: 'Klee One', serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 28px);
   text-align: right;
 }
 
 /* ============================================================
    RECRUIT
    ============================================================ */
-.recruit { background: var(--c-blue-light); }
+.recruit { background: var(--c-blue-light); overflow-x: hidden; }
 .recruit__lead {
   text-align: center;
   font-size: clamp(14px, 1.6vw, 18px);
@@ -404,7 +432,10 @@ button { font: inherit; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(8px, 1.4vw, 17px);
-  margin: clamp(28px, 4vw, 44px) 0;
+  max-width: 1600px;
+  margin: clamp(28px, 4vw, 44px) auto;
+  padding-inline: clamp(12px, 1.6vw, 20px);
+  padding: 0 40px;
 }
 .recruit__gallery div { aspect-ratio: 1 / 1; overflow: hidden; }
 .recruit__gallery img { width: 100%; height: 100%; object-fit: cover; }
@@ -414,7 +445,19 @@ button { font: inherit; }
   padding-top: clamp(40px, 6vw, 70px);
   margin-top: clamp(40px, 6vw, 70px);
 }
+.recruit__persona-bg {
+  position: absolute;
+  z-index: 0;
+  top: 10%;
+  right: calc((min(100vw, 1400px) - var(--container-w)) / -2 - 10px);
+  width: clamp(220px, 30vw, 390px);
+  height: auto;
+  opacity: 0.4;
+  pointer-events: none;
+}
 .recruit__persona-title {
+  position: relative;
+  z-index: 1;
   text-align: center;
   color: var(--c-blue);
   font-size: clamp(20px, 2.6vw, 28px);
@@ -422,6 +465,8 @@ button { font: inherit; }
   margin-bottom: clamp(24px, 3vw, 40px);
 }
 .recruit__persona-inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 540fr 405fr;
   gap: clamp(24px, 4vw, 55px);
@@ -475,11 +520,25 @@ button { font: inherit; }
 }
 .company__table th { width: 120px; white-space: nowrap; padding-right: 20px; }
 .company__map {
+  position: relative;
   aspect-ratio: 1000 / 250;
   background: #c5c5c5;
   overflow: hidden;
 }
 .company__map iframe { width: 100%; height: 100%; border: 0; }
+.company__map-link {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: #fff;
+  color: var(--c-blue);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.company__map-link:hover { opacity: 0.85; }
 
 /* ============================================================
    CONTACT
