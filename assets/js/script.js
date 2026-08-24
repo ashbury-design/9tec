@@ -9,6 +9,11 @@
     };
     window.addEventListener('scroll', toggleToTop, { passive: true });
     toggleToTop();
+
+    toTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   // Scroll reveal animation
