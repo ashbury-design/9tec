@@ -775,10 +775,10 @@ button { font: inherit; }
   .interview__text p,
   .contact__lead,
   .company__table th,
-  .company__table td {
-    font-size: 16px;
+  .company__table td,
+  .recruit__persona-text li {
+    font-size: 15px;
   }
-  .recruit__persona-text li { font-size: 15px; }
 
   .company__grid { grid-template-columns: 1fr; }
   .company__photo { aspect-ratio: 300 / 370; }
