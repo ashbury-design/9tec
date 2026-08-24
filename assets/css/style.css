@@ -777,7 +777,7 @@ button { font: inherit; }
   .company__table th,
   .company__table td,
   .recruit__persona-text li {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .company__grid { grid-template-columns: 1fr; }
